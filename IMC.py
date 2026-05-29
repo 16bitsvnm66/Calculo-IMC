@@ -16,3 +16,8 @@ def verificar_peso(imc: float) -> str:
         return "Sobrepeso"
     else: 
         return "Obesidade"
+    
+if __name__ == "__main__":
+
+    print("Calculadora de IMC")
+    print("---------------------------")
