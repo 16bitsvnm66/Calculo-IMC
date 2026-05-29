@@ -7,7 +7,7 @@ def calcular_imc(peso, altura_cm):
     return imc
 
 
-def verificar_peso(imc: float) -> str:
+def classificação_imc(imc):
     if imc < 18.5:
         return "Abaixo do peso"
     elif 18.5 <= imc < 25:
@@ -17,26 +17,15 @@ def verificar_peso(imc: float) -> str:
     else: 
         return "Obesidade"
     
-if __name__ == "__main__":
 
+def main():
+ 
     print("Calculadora de IMC")
     print("---------------------------")
 
-    try:
+    peso = float(input("Introduzir o seu peso (kg):"))
+    altura = float(input("Introduzir a sua altura (cm):"))
+
+   
        
-        peso = float(input("Introduza o peso (kg): "))
-        altura = float(input("Introduza a altura (cm): "))
-
-        imc = calcular_imc(peso, altura)
-
-        resultado = verificar_peso(imc)
-
-        print(f"\nIMC: {imc:.1f}")
-        print(resultado)
     
-
-    except ValueError:
-        print("Por favor, introduza valores numéricos válidos para peso e altura.")
-
-    except ZeroDivisionError:
-        print("A altura não pode ser zero.")
