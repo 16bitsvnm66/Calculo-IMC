@@ -20,4 +20,19 @@ def verificar_peso(imc: float) -> str:
 if __name__ == "__main__":
 
     print("Calculadora de IMC")
-    print("---------------------------")
+    print("---------------------------")    print("---------------------------")
+
+    try:
+       
+        peso = float(input("Introduza o peso (kg): "))
+        altura = float(input("Introduza a altura (cm): "))
+
+        imc = calcular_imc(peso, altura)
+
+        resultado = verificar_peso(imc)
+
+        print(f"\nIMC: {imc:.2f}")
+        print(resultado)
+    
+
+    
