@@ -20,7 +20,7 @@ def verificar_peso(imc: float) -> str:
 if __name__ == "__main__":
 
     print("Calculadora de IMC")
-    print("---------------------------")    print("---------------------------")
+    print("---------------------------")
 
     try:
        
@@ -31,8 +31,12 @@ if __name__ == "__main__":
 
         resultado = verificar_peso(imc)
 
-        print(f"\nIMC: {imc:.2f}")
+        print(f"\nIMC: {imc:.1f}")
         print(resultado)
     
 
-    
+    except ValueError:
+        print("Por favor, introduza valores numéricos válidos para peso e altura.")
+
+    except ZeroDivisionError:
+        print("A altura não pode ser zero.")
