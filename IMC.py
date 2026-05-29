@@ -1,9 +1,7 @@
 def calcular_imc(peso, altura_cm): 
     
-
     altura_m = altura_cm / 100
     imc = peso / (altura_m ** 2)
-
 
     return imc
 
@@ -19,16 +17,19 @@ def classificação_imc(imc):
         return "Obesidade"
     
 
-def mostrar_total(imcs, classificações):
+def classificação_mais_frequente(classificações):
+     return max(set(classificações), key=classificações.count)
+    
+
+def mostrar_resumo(imcs, classificações):
     total_consultas = len(imcs)
     media_imc = sum(imcs) / total_consultas
+    mais_frequente = classificação_mais_frequente(classificações)
 
     print(f"Total de consultas realizadas: {total_consultas}")
     print(f"Média dos IMCs calculados: {media_imc: .2f}")
-    
+    print(f"Classificação mais frequente registada: {mais_frequente}")
 
-def classificação_mais_frequente(classificações):
-     return max(set(classificações), key=classificações.count)  
 
 def pedir_valor(mensagem):
     while True:
@@ -74,7 +75,7 @@ def main():
     
 
 
-     mostrar_total(imcs, classificações)
+     mostrar_resumo(imcs, classificações)
 
 
 main()
