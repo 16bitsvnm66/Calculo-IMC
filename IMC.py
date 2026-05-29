@@ -50,14 +50,15 @@ def main():
      print("Calculadora de IMC")
      print("---------------------------")
 
-     peso = float(input("Introduzir o seu peso (kg):"))
-     altura = float(input("Introduzir a sua altura (cm):"))
+     peso = pedir_valor("Introduzir o seu peso (kg):")
+     altura = pedir_valor("Introduzir a sua altura (cm):")
 
-   
-       
+
      imc = calcular_imc(peso, altura)
-
      classificação = classificação_imc(imc)
+
+     imcs.append(imc)
+     classificações.append(classificação)
 
      print(f"Seu IMC é: {imc: .2f}")
      print(f"Classificação: {classificação}")
