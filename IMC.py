@@ -47,24 +47,34 @@ def main():
      imcs = []
      classificações = []
 
+     while True:
+
  
-     print("Calculadora de IMC")
-     print("---------------------------")
+            print("\nCalculadora de IMC")
+            print("---------------------------")
 
-     peso = pedir_valor("Introduzir o seu peso (kg):")
-     altura = pedir_valor("Introduzir a sua altura (cm):")
+            peso = pedir_valor("Introduzir o seu peso (kg):")
+            altura = pedir_valor("Introduzir a sua altura (cm):")
 
 
-     imc = calcular_imc(peso, altura)
-     classificação = classificação_imc(imc)
+            imc = calcular_imc(peso, altura)
+            classificação = classificação_imc(imc)
 
-     imcs.append(imc)
-     classificações.append(classificação)
+            imcs.append(imc)
+            classificações.append(classificação)
 
-     print(f"Seu IMC é: {imc: .2f}")
-     print(f"Classificação: {classificação}")
+            print(f"Seu IMC é: {imc: .2f}")
+            print(f"Classificação: {classificação}")
+
+            continuar = input("Deseja calcular outro IMC? (s/n): ").lower()
+
+            if continuar != 's':
+              break
+                
+    
+
 
      mostrar_total(imcs, classificações)
 
-     
+
 main()
