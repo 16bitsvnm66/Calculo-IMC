@@ -44,6 +44,8 @@ def pedir_valor(mensagem):
             print("Erro! Introduza apenas números.")
 
 def main():
+     imcs = []
+     classificações = []
  
      print("Calculadora de IMC")
      print("---------------------------")
