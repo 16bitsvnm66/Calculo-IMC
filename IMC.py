@@ -27,8 +27,21 @@ def mostrar_total(imcs, classificações):
     print(f"Média dos IMCs calculados: {media_imc: .2f}")
     
 
- def classificação_mais_frequente(classificações):
+def classificação_mais_frequente(classificações):
      return max(set(classificações), key=classificações.count)  
+
+def pedir_valor(mensagem):
+    while True:
+        try:
+            valor = float(input(mensagem))
+
+            if valor <= 0:
+                print("Erro! O valor deve ser maior que zero.")
+            else:
+                return valor
+
+        except ValueError:
+            print("Erro! Introduza apenas números.")
 
 def main():
  
