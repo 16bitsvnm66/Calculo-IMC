@@ -4,6 +4,7 @@ def calcular_imc(peso, altura_cm):
     altura_m = altura_cm / 100
     imc = peso / (altura_m ** 2)
 
+
     return imc
 
 
@@ -13,7 +14,7 @@ def classificação_imc(imc):
     elif 18.5 <= imc < 25:
         return "Peso normal"
     elif 25<= imc < 30:
-        return "Sobrepeso"
+        return "Excesso de peso"
     else: 
         return "Obesidade"
     
