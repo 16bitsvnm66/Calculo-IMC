@@ -46,6 +46,7 @@ def pedir_valor(mensagem):
 def main():
      imcs = []
      classificações = []
+
  
      print("Calculadora de IMC")
      print("---------------------------")
@@ -62,4 +63,8 @@ def main():
 
      print(f"Seu IMC é: {imc: .2f}")
      print(f"Classificação: {classificação}")
+
+     mostrar_total(imcs, classificações)
+
+     
 main()
