@@ -23,7 +23,12 @@ def mostrar_total(imcs, classificações):
     total_consultas = len(imcs)
     media_imc = sum(imcs) / total_consultas
 
+    print(f"Total de consultas realizadas: {total_consultas}")
+    print(f"Média dos IMCs calculados: {media_imc: .2f}")
     
+
+ def classificação_mais_frequente(classificações):
+     return max(set(classificações), key=classificações.count)  
 
 def main():
  
