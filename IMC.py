@@ -19,6 +19,12 @@ def classificação_imc(imc):
         return "Obesidade"
     
 
+def mostrar_total(imcs, classificações):
+    total_consultas = len(imcs)
+    media_imc = sum(imcs) / total_consultas
+
+    
+
 def main():
  
      print("Calculadora de IMC")
