@@ -1,4 +1,4 @@
-def calcular_imc(peso, altura_cm):
+def calcular_imc(peso, altura_cm): 
     
 
     altura_m = altura_cm / 100
@@ -20,12 +20,18 @@ def classificação_imc(imc):
 
 def main():
  
-    print("Calculadora de IMC")
-    print("---------------------------")
+     print("Calculadora de IMC")
+     print("---------------------------")
 
-    peso = float(input("Introduzir o seu peso (kg):"))
-    altura = float(input("Introduzir a sua altura (cm):"))
+     peso = float(input("Introduzir o seu peso (kg):"))
+     altura = float(input("Introduzir a sua altura (cm):"))
 
    
        
-    
+     imc = calcular_imc(peso, altura)
+
+     classificação = classificação_imc(imc)
+
+     print(f"Seu IMC é: {imc: .2f}")
+     print(f"Classificação: {classificação}")
+main()
