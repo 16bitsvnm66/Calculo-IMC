@@ -1,8 +1,8 @@
-def calcular_imc(peso: float, altura_cm: float) -> float:
+def calcular_imc(peso, altura_cm):
     
 
     altura_m = altura_cm / 100
-    imc = peso / (altura_m * altura_m)
+    imc = peso / (altura_m ** 2)
 
     return imc
 
